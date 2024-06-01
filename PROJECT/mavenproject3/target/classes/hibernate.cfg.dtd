@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+    TODO define vocabulary identification
+    PUBLIC ID: -//vendor//vocabulary//EN
+    SYSTEM ID: http://server/path/hibernate.cfg.dtd
+
+-->
+
+<!--
+    An example how to use this DTD from your XML document:
+
+    <?xml version="1.0"?>
+
+    <!DOCTYPE hibernate-configuration SYSTEM "hibernate.cfg.dtd">
+
+    <hibernate-configuration>
+    ...
+    </hibernate-configuration>
+-->
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT hibernate-configuration (session-factory)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT session-factory (property|mapping)*>
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT property (#PCDATA)>
+<!ATTLIST property
+    name CDATA #IMPLIED
+  >
+
+<!--- Put your DTDDoc comment here. -->
+<!ELEMENT mapping EMPTY>
+<!ATTLIST mapping
+    class CDATA #IMPLIED
+  >
